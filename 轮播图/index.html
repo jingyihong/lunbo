@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;list-style: none;cursor: pointer;}
+		#box{width: 800px;height: 409px;overflow: hidden;margin:50px auto;position: relative;}
+		ul li{float: left;}
+		img{width: 800px;height: 409px;}
+		ol{position: absolute;left:35%;bottom:10px;}
+		ol li{float: left;width: 25px;height: 25px;border-radius: 50%;background: #fff;margin-left: 15px;text-align: center;line-height: 25px;}
+		span{width: 50px;height: 100px;text-align: center;line-height: 100px;position: absolute;top:40%;background: rgba(0,0,0,.5);font-size: 50px;color: #fff;font-weight: bolder;}
+		#prev{left:0;}
+		#next{right:0;}
+		.bg{background: skyblue;color: #fff;}
+	</style>
+</head>
+<body>
+	
+	<div id="box">
+		<ul>
+			<li><img src="img/1.jpg" alt=""></li>
+			<li><img src="img/2.jpg" alt=""></li>
+			<li><img src="img/3.jpg" alt=""></li>
+			<li><img src="img/4.jpg" alt=""></li>
+			<li><img src="img/5.jpg" alt=""></li>
+			<li><img src="img/6.jpg" alt=""></li>
+			<li><img src="img/1.jpg" alt=""></li>
+		</ul>
+		<ol>
+			<li class="bg">1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ol>
+		<span id="prev"><</span>
+		<span id="next">></span>
+	</div>
+
+	<script src="jquery-1.8.3.min.js"></script>
+	<script src="jquery.slide.js"></script>
+	<script>
+		$(function(){
+			$("#box").slide({
+				prev:"#prev",
+				next:"#next",
+				speed:1000,
+				time:2000,
+				driction:"left"
+			})
+
+		})
+
+	</script>
+</body>
+</html>
